@@ -13,6 +13,8 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+.idea
+.mvn
 
 # Windows shortcuts
 *.lnk
@@ -45,3 +47,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+target
+.idea/encodings.xml
+*.xml
