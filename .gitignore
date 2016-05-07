@@ -49,5 +49,4 @@ Temporary Items
 .apdisk
 
 target
-.idea/encodings.xml
-*.xml
+*.bak
