@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="300 seconds">
+    <!-- To override log file name and path of spring boot, LOG_FILE property should be placed at first -->
+    <property name="LOG_FILE" value="${oneview.home:-${java.io.tmpdir}}/logs/config-server.log"/>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.cloud" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+</configuration>
