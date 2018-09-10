@@ -1,4 +1,4 @@
-package com.spring.cloud.book.bookservice;
+package com.spring.cloud.discovery.eurekaserver;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapAttributeConfig;

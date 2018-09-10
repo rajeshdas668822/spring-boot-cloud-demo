@@ -4,6 +4,11 @@
     <property name="LOG_FILE" value="${oneview.home:-${java.io.tmpdir}}/logs/config-server.log"/>
 
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.security" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+
     <logger name="org.springframework.cloud" level="DEBUG" additivity="false">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>

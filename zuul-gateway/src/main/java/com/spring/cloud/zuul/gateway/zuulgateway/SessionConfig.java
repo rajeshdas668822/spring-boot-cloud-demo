@@ -1,4 +1,4 @@
-package com.spring.cloud.book.bookservice;
+package com.spring.cloud.zuul.gateway.zuulgateway;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapAttributeConfig;
@@ -7,12 +7,13 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.session.hazelcast.HazelcastFlushMode;
 import org.springframework.session.hazelcast.HazelcastSessionRepository;
 import org.springframework.session.hazelcast.PrincipalNameExtractor;
 import org.springframework.session.hazelcast.config.annotation.web.http.EnableHazelcastHttpSession;
 import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 
-@EnableHazelcastHttpSession
+@EnableHazelcastHttpSession(hazelcastFlushMode = HazelcastFlushMode.IMMEDIATE)
 @Configuration
 public class SessionConfig extends AbstractHttpSessionApplicationInitializer {
 
